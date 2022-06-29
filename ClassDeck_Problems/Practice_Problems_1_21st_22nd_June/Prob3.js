@@ -6,12 +6,10 @@ is possible to make such distribution or not based upon n number of pieces. I.e.
 `yes` or `no.`
 */
 
-function check(n){
-    return (
-        n < 2 ? false : (n%2===0 ? true :false)
-    )
+function check(n) {
+  return n < 2 ? false : n % 2 === 0 ? true : false;
 }
-console.log(check(7)?'YES' : 'NO');
-console.log(check(74)?'YES' : 'NO');
-console.log(check(0)?'YES' : 'NO');
-console.log(check(1)?'YES' : 'NO');
+console.log(check(7) ? "YES" : "NO");
+console.log(check(74) ? "YES" : "NO");
+console.log(check(0) ? "YES" : "NO");
+console.log(check(1) ? "YES" : "NO");
