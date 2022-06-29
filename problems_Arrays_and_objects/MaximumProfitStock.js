@@ -9,5 +9,16 @@ Day 4 and sell on Day 6)
 
 let input = [100, 180, 260, 310, 40, 535, 695];
 document.getElementById("array").innerHTML = `Cost of Stocks: [${input}]`;
-// document.getElementById("print").innerHTML = `Max: ${max} </br>Min: ${min}`;
 
+
+//Naive approach - Incomplete
+
+let profit = 0;
+for(let i = 0; i<input.length;i++){
+    for(let j = i+1;j<input.length;j++){
+        profit = Math.max(input[j]-input[i],profit);
+        console.log(input[j],input[i],profit);
+    }
+}
+
+document.getElementById("print").innerHTML = `Profit: ${profit}`;
