@@ -8,5 +8,21 @@ Output - 1
 
 */
 
-//Will try shortly
-//Incomplete
+let factorOf60 = function (num) {
+  let sum = 0;
+  let temp = num;
+  let lastDigit = false,
+    secondLastDigit = false;
+  while (temp > 0) {
+    let dig = temp % 10;
+    // console.log(dig);
+    if (!lastDigit && dig === 0) lastDigit = true;
+    if (!secondLastDigit && dig % 2 === 0) secondLastDigit = true;
+    sum += dig;
+    temp = Math.floor(temp/10);
+  }
+  if (lastDigit && secondLastDigit && sum % 3 === 0) return 1;
+  else return 0;
+};
+
+console.log(`${factorOf60(2340)}`);
