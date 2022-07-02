@@ -44,12 +44,14 @@ function shiftNegative(arr) {
       // console.log(arr,i,j);
     }
   }
+  return arr;
 }
 
 document.getElementById("title").innerHTML = 'Shift Negative Elements';
 list = [-5, 3, -4, 88, -9, -10, 21, 5, 6];
 console.log(`Initial: \n${list}`);
 document.getElementById("array").innerHTML = `Initial: </br>${list}`;
-shiftNegative(list);
-console.log(`Final: \n${list}`);
-document.getElementById("result").innerHTML = `Final:</br> ${list}`;
+let ans = shiftNegative(list);
+console.log(`Final: \n${ans}`);
+document.getElementById("result").innerHTML = `Final:</br> ${ans}`;
+
