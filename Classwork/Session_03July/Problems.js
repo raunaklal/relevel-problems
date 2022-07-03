@@ -6,14 +6,14 @@ document.getElementById("title").innerHTML =
 let temp = [1, 3, 4, 5, 4, 3, 5];
 document.getElementById("array").innerHTML = "Input Array:" + temp;
 temp = temp.sort();
-console.log(temp);
-console.log(temp.at(-2));
+// console.log(temp);
+// console.log(temp.at(-2));
 
 let uniqueSortedArray = new Set(temp);
-console.log(uniqueSortedArray);
-console.log([...uniqueSortedArray]); // ... destructuring the object
+// console.log(uniqueSortedArray);
+// console.log([...uniqueSortedArray]); // ... destructuring the object
 uniqueSortedArray = [...uniqueSortedArray];
-console.log(uniqueSortedArray.at(-2));
+// console.log(uniqueSortedArray.at(-2));
 
 let ans;
 if (uniqueSortedArray.length <= 1) ans = "None";
