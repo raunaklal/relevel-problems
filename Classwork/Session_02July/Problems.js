@@ -55,3 +55,14 @@ let ans = shiftNegative(list);
 console.log(`Final: \n${ans}`);
 document.getElementById("result").innerHTML = `Final:</br> ${ans}`;
 
+
+function swap(a,b){
+  let temp = a
+  a = b
+  b = temp
+}
+let num1 = 1;
+let num2 = 2;
+console.log(num1,num2);
+swap(1,2);
+console.log(num1,num2);
