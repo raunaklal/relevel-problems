@@ -28,16 +28,16 @@ document.getElementById("result").innerHTML = `Answer: ${ans}`;
  * eg - [32,34,56,21,49,11,34]
  * Ans = - [21,49,56]
  */
- document.getElementById("title2").innerHTML =
- "Divisible by 7";
+document.getElementById("title2").innerHTML = "Divisible by 7";
 let array = [32, 34, 56, 21, 49, 11, 34];
 document.getElementById("array2").innerHTML = "Input Array:" + array;
 function divBy7(arr) {
-    return arr.filter((ele) => {
-        return ele % 7 === 0;
-      });
+  //O(N)
+  return arr.filter((ele) => {
+    return ele % 7 === 0;
+  });
 }
-ans = divBy7([32,34,56,21,49,11,34])
+ans = divBy7([32, 34, 56, 21, 49, 11, 34]);
 // console.log(ans);
 document.getElementById("result2").innerHTML = `Answer: ${ans}`;
 
@@ -56,23 +56,22 @@ document.getElementById("result2").innerHTML = `Answer: ${ans}`;
 2. We perform filter on the array,such that, element is divisible by n,
     i.e, ele%n===0. If its true we return the element
 */
-document.getElementById("title3").innerHTML =
-"Divisible by N";
-function divByN(arr,n) {
-    return arr.filter((ele) => {
-        return ele % n === 0;
-      });
+document.getElementById("title3").innerHTML = "Divisible by N";
+function divByN(arr, n) {
+  //O(N)
+  return arr.filter((ele) => {
+    return ele % n === 0;
+  });
 }
-array = [32,34,56,21,49,11,34,30]
+array = [32, 34, 56, 21, 49, 11, 34, 30];
 document.getElementById("array3i").innerHTML = "Input Array:" + array;
-let n  =6;
-ans =divByN(array,6)
+let n = 6;
+ans = divByN(array, 6);
 // console.log(ans);
 document.getElementById("result3i").innerHTML = `Answer: ${ans}`;
-array = [23,34,56,43,16,24,81,18]
+array = [23, 34, 56, 43, 16, 24, 81, 18];
 document.getElementById("array3ii").innerHTML = "Input Array:" + array;
-n  =9;
-ans =divByN(array,n)
+n = 9;
+ans = divByN(array, n);
 document.getElementById("result3ii").innerHTML = `Answer: ${ans}`;
 // console.log(ans);
-
