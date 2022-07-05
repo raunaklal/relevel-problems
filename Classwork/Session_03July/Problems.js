@@ -19,7 +19,7 @@ let ans;
 if (uniqueSortedArray.length <= 1) ans = "None";
 else ans = uniqueSortedArray.at(-2);
 
-document.getElementById("result").innerHTML = `Answer: ${ans}`;
+document.getElementById("result").innerHTML = `Output: ${ans}`;
 
 //Q2-> Write a function to return all the values in array which is divisible by 7
 /**
@@ -39,7 +39,7 @@ function divBy7(arr) {
 }
 ans = divBy7([32, 34, 56, 21, 49, 11, 34]);
 // console.log(ans);
-document.getElementById("result2").innerHTML = `Answer: ${ans}`;
+document.getElementById("result2").innerHTML = `Output: ${ans}`;
 
 /**
  * Q - 3 write a function to
@@ -68,10 +68,68 @@ document.getElementById("array3i").innerHTML = "Input Array:" + array;
 let n = 6;
 ans = divByN(array, 6);
 // console.log(ans);
-document.getElementById("result3i").innerHTML = `Answer: ${ans}`;
+document.getElementById("result3i").innerHTML = `Output: ${ans}`;
 array = [23, 34, 56, 43, 16, 24, 81, 18];
 document.getElementById("array3ii").innerHTML = "Input Array:" + array;
 n = 9;
 ans = divByN(array, n);
-document.getElementById("result3ii").innerHTML = `Answer: ${ans}`;
+document.getElementById("result3ii").innerHTML = `Output: ${ans}`;
 // console.log(ans);
+
+const divideByN = (arr, num) => arr.filter((element) => element % num === 0);
+
+console.log(divideByN(array, n));
+
+console.log(array);
+/* 
+function to print even number list 
+you have to take from and to value, 
+between that you need to print even values
+*/
+function evenList(start, end) {
+  let ans = [];
+  for (let i = start; i <= end; i++) {
+    if (i % 2 === 0) ans.push(i);
+  }
+  //   console.log(ans);
+  return ans;
+}
+console.log(evenList(75, 120));
+
+let studentMarks = [
+  {
+    subject: "Math",
+    marks: 50,
+    name: "Raunak",
+  },
+  {
+    subject: "Math",
+    marks: 45,
+    name: "Sneha",
+  },
+  {
+    subject: "Math",
+    marks: 47,
+    name: "Rahul",
+  },
+  {
+    subject: "Math",
+    marks: 40,
+    name: "Abhishek",
+  },
+];
+
+let filteredValues = studentMarks.filter((element) => {
+  return element.marks > 40;
+});
+console.log(filteredValues);
+console.log(studentMarks);
+
+let mappedValue = studentMarks.map((element) => {
+  return { ...element, class: "VI" };
+});
+console.log(mappedValue);
+console.log(studentMarks);
+
+let removeSpecificValue = studentMarks.splice(1,3);
+console.log(removeSpecificValue);
